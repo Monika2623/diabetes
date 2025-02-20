@@ -1,4 +1,5 @@
 import pickle
+import os 
 import streamlit as st
 import pandas as pd
 from sklearn.metrics import accuracy_score
@@ -8,7 +9,7 @@ st.set_page_config(page_title="Diabetes Prediction", layout="wide", page_icon="ð
 st.title('Diabetes Prediction using ML')
 
 # Load trained model safely
-diabetes_model_path = r"diabetes_model.sav"
+diabetes_model_path = "diabetes_model.sav"
 
 try:
     with open(diabetes_model_path, 'rb') as model_file:
